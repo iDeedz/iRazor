@@ -1,0 +1,2 @@
+C:\Users\Dereck Bester\Documents\GitHub\iRazor\iRazor.Tests\obj\Debug\iRazor.Tests.vbprojResolveAssemblyReference.cache
+C:\Users\Dereck Bester\Documents\GitHub\iRazor\iRazor.Tests\obj\Debug\iRazor.Tests.vbproj.CoreCompileInputs.cache
