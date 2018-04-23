@@ -2,13 +2,13 @@
 Imports System.Web.Optimization
 
 Public Class WebApiApplication
-    Inherits System.Web.HttpApplication
+    Inherits HttpApplication
 
     Sub Application_Start()
         AreaRegistration.RegisterAllAreas()
-        GlobalConfiguration.Configure(AddressOf WebApiConfig.Register)
-        FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
-        RouteConfig.RegisterRoutes(RouteTable.Routes)
-        BundleConfig.RegisterBundles(BundleTable.Bundles)
+        GlobalConfiguration.Configure(AddressOf Register)
+        RegisterGlobalFilters(GlobalFilters.Filters)
+        RegisterRoutes(RouteTable.Routes)
+        RegisterBundles(BundleTable.Bundles)
     End Sub
 End Class

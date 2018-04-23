@@ -17,6 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", New With {.area = ""}, New With {Key .[class] = "nav-link"})</li>
+                <li class="nav-item">@Html.ActionLink("About", "About", "Home", New With {.area = ""}, New With {Key .[class] = "nav-link"})</li>
                 <li class="nav-item">@Html.ActionLink("API", "Index", "Help", New With {.area = ""}, New With {Key .[class] = "nav-link"})</li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
