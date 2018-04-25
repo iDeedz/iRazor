@@ -1,24 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@PageData("Title") - My ASP.NET Web Page</title>
-        <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
-        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-        <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
-        <script src="~/Scripts/modernizr-2.6.2.js"></script>
-        <meta name="viewport" content="width=device-width" />
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>@PageData("Title") - My ASP.NET Web Page</title>
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <script src="@Href("~/signalr/hubs")"></script>
+</head>
     <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title"><a href="~/">your logo here</a></p>
+    <header>
+    <div Class="content-wrapper">
+                <div Class="float-left">
+                    <p Class="site-title"><a href="~/">your logo here</a></p>
                 </div>
-                <div class="float-right">
-                    <section id="login">
+                <div Class="float-right">
+                    <section id = "login" >
                         @If WebSecurity.IsAuthenticated Then
                             @<text>
                                 Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
@@ -35,9 +36,9 @@
                         End If
                     </section>
                     <nav>
-                        <ul id="menu">
+                    <ul id="menu">
                             <li><a href="~/">Home</a></li>
-                            <li><a href="~/About">About</a></li>
+                    <li><a href="~/About">About</a></li>
                             <li><a href="~/Contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -45,13 +46,13 @@
             </div>
         </header>
         <div id="body">
-            @RenderSection("featured", required:=false)
+            @RenderSection("featured", required:=False)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
         </div>
         <footer>
-            <div class="content-wrapper">
+                        <div class="content-wrapper">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - My ASP.NET Web Page</p>
                 </div>

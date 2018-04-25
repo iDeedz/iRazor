@@ -1,5 +1,8 @@
-﻿@Code
-    WebSecurity.InitializeDatabaseConnection("StarterSite", "UserProfile", "UserId", "Email", autoCreateTables:=true)
+﻿@Imports System.Web.Routing
+@Code
+    WebSecurity.InitializeDatabaseConnection("StarterSite", "UserProfile", "UserId", "Email", autoCreateTables:=True)
+
+    RouteTable.Routes.MapHubs()
 
     ' To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
     ' you must update this site. For more information visit https://go.microsoft.com/fwlink/?LinkID=226949
